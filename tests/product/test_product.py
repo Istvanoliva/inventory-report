@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 from inventory_report.inventory.product import Product
+=======
+# from inventory_report.inventory.product import Product
+# initial commit
+>>>>>>> 54dcde3f2a2ce2a412d9796d22bf0500ae3d595f
 
 def test_cria_produto():
     product = Product(
