@@ -23,9 +23,8 @@ class Inventory:
 
         if (type == 'simples'):
             return SimpleReport.generate(products)
-            
-        return CompleteReport.generate(products)
 
+        return CompleteReport.generate(products)
 
     @classmethod
     def read_csv(cls, path):
