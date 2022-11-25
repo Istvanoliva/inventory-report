@@ -9,15 +9,17 @@ from inventory_report.reports.simple_report import SimpleReport
 class Inventory:
 
     @classmethod
-    def import_data(cls, path, type):
-        products = []
-
+    def read_file(cls, path):
         if path.endswith('csv'):
-            products = cls.read_csv(path)
+            return cls.read_csv(path)
         if path.endswith('json'):
-            products = cls.read_json(path)
+            return cls.read_json(path)
         if path.endswith('xml'):
-            products = cls.read_xml(path)
+            return cls.read_xml(path)
+
+    @classmethod
+    def import_data(cls, path, type):
+        products = cls.read_file(path)
 
         if (type == 'simples'):
             return SimpleReport.generate(products)
