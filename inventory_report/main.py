@@ -13,6 +13,7 @@ def get_importer_type(path):
     if path.endswith("json"):
         return JsonImporter
 
+
 def main():
     try:
         path, report_type = sys.argv[1:]

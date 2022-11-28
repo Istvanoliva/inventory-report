@@ -21,7 +21,6 @@ class InventoryRefactor(Iterable):
         else:
             raise ValueError("Tipo de relatório inválido")
 
-
     def import_data(self, path, type):
         self.data += self.importer.import_data(path)
         return self.__verify_type_inventory(type)
